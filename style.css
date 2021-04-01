@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+/* Root makes it easier to access the main colors of the site at the top, rather than going through each individual class when you want to make a change  */
+:root {
+  --red: #f9032f;
+  --black: #000;
+  --white: #fff;
+}
+
+.navbar {
+  background: var(--black);
+  height: 4rem;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  /* How wide we want the side to span. So the edges will always have that space on the left of logo and right of links*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-logo {
+  color: var(--white);
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.navbar-link {
+  color: var(--white);
+  padding: 0rem 1rem;
+}
+
+.navbar-link:hover {
+  color: var(--red);
+}
+
+@media (max-width: 768px) {
+  /* Prevents the user from scrolling after clicking on burger` */
+  body.active {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .navbar-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* creates the drop down when user clicks on the burger */
+  .navbar-menu {
+    display: grid;
+    grid-template-columns: 1fr; /* li sit in one column that holds 100px thick links*/
+    grid-template-rows: repeat(4, 100px);
+    position: absolute;
+    width: 100%;
+    top: -1000px; /* this is needed to hide the li from view prior to clicking on the burger */
+  }
+
+  .navbar-menu.active {
+    top: 100%;
+    opacity: 1;
+    z-index: 2;
+    height: 100vh;
+    font-size: 1.5rem;
+    background: var(--black);
+  }
+
+  /* this actually makes the bars for the burger */
+  .navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: var(--white);
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  /* nth-child(2)targets the second bar */
+  .mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  /* creates the illusion of the burger turning into the X on click */
+  .mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
