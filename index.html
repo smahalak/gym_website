@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gym</title>
+    <title>MON Gym</title>
     <link rel="stylesheet" href="./style.css" />
+    <link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -35,9 +36,9 @@
     <!-- HOME-TOP -->
     <div class="home-top">
       <div class="home-content">
-        <h1 class="home-title">MON FITNESS</h1>
-        <p>Join now for $1</p>
-        <a href="/" class="get-started-btn">Get started</a>
+        <h1 class="home-title gsap-home">MON FITNESS</h1>
+        <p class="gsap-home">Join now for $1</p>
+        <a href="/" class="get-started-btn gsap-home">Get started</a>
       </div>
     </div>
 
@@ -45,43 +46,51 @@
     <div class="services">
       <div class="services-container">
         <div>
-          <p class="section-title">Our gym <span>is your gym</span></p>
-          <h2 class="services-heading">What we offer</h2>
+          <p class="section-title gsap-services">
+            Our gym <span>is your gym</span>
+          </p>
+          <h2 class="services-heading gsap-services">What we offer</h2>
           <div class="services-features">
-            <p class="services-feature">
+            <p class="services-feature gsap-services">
               <i class="far fa-check-circle"></i>
               Group fitness
             </p>
-            <p class="services-feature">
+            <p class="services-feature gsap-services">
               <i class="far fa-check-circle"></i>
               Personal training
             </p>
-            <p class="services-feature">
+            <p class="services-feature gsap-services">
               <i class="far fa-check-circle"></i>
               Turf flooring
             </p>
-            <p class="services-feature">
+            <p class="services-feature gsap-services">
               <i class="far fa-check-circle"></i>
               Rock climbing
             </p>
-            <p class="services-feature">
+            <p class="services-feature gsap-services">
               <i class="far fa-check-circle"></i>
               Open 24/7
             </p>
           </div>
         </div>
         <div>
-          <img src="./images/services-gym.jpg" alt="gym" class="services-img" />
+          <img
+            src="./images/services-gym.jpg"
+            alt="gym"
+            class="services-img gsap-services-img"
+          />
         </div>
       </div>
     </div>
 
     <!-- Membership -->
     <div class="membership">
-      <h2>View our plans</h2>
-      <p class="membership-desc">Start today and the first month is free!</p>
+      <h2 class="gsap-membership">View our plans</h2>
+      <p class="membership-desc gsap-membership">
+        Start today and the first month is free!
+      </p>
       <div class="membership-container">
-        <div class="membership-card">
+        <div class="membership-card gsap-card">
           <div class="membership-title">
             <i class="fas fa-running membership-icon"></i>
             <h3>Pika Plan</h3>
@@ -93,7 +102,7 @@
           <a href="/" class="get-started-btn">Sign Up</a>
         </div>
 
-        <div class="membership-card">
+        <div class="membership-card gsap-card">
           <div class="membership-title">
             <i class="fas fa-biking membership-icon"></i>
             <h3>Gym Leader Plan</h3>
@@ -106,7 +115,7 @@
           <a href="/" class="get-started-btn">Sign Up</a>
         </div>
 
-        <div class="membership-card">
+        <div class="membership-card gsap-card">
           <div class="membership-title">
             <i class="fas fa-dumbbell membership-icon"></i>
             <h3>Elite Four Plan</h3>
@@ -125,22 +134,22 @@
     <!-- Staff -->
     <div class="staff">
       <div class="staff-container">
-        <div class="staff-text">
-          <p class="section-title">Private coaching</p>
+        <div class="staff-text gsap-staff">
+          <p class="section-title">Personal trainers</p>
           <h2>Meet our Staff</h2>
-          <p class="desc">Our staff has over 20 years experience.</p>
+          <p class="staff-desc">Our staff has over 20 years experience.</p>
         </div>
 
-        <div class="staff-text">
+        <div class="staff-text gsap-staff">
           <p class="section-title">Free trial</p>
           <h2>One week trial</h2>
-          <p class="desc">
-            For up to 7 day, you can work with our trainers for free!
+          <p class="staff-desc">
+            For up to 7 days, you can work with our trainers for free!
           </p>
         </div>
 
-        <div class="staff-card">
-          <p>Hitmonchan</p>
+        <div class="staff-card gsap-staff">
+          <p class="staff-name">Hitmonchan</p>
           <img
             src="./images/hitmonchan.jpg"
             alt="Hitmonchan"
@@ -148,18 +157,18 @@
           />
         </div>
 
-        <div class="staff-card">
-          <p>Primeape</p>
+        <div class="staff-card gsap-staff">
+          <p class="staff-name">Primeape</p>
           <img src="./images/primeape.jpg" class="staff-image" />
         </div>
 
-        <div class="staff-card">
-          <p>Hitmonlee</p>
+        <div class="staff-card gsap-staff">
+          <p class="staff-name">Hitmonlee</p>
           <img src="./images/hitmonlee.jpg" class="staff-image" />
         </div>
 
-        <div class="staff-card">
-          <p>Machamp</p>
+        <div class="staff-card gsap-staff">
+          <p class="staff-name">Machamp</p>
           <img
             src="./images/machamp-climb.jpg"
             alt="Machamp"
@@ -168,6 +177,26 @@
         </div>
       </div>
     </div>
+
+    <!-- Contact -->
+    <div class="email">
+      <div class="email-content">
+        <h3>Join our MON gym now!</h3>
+        <p>Contact us</p>
+        <form>
+          <div class="form-container">
+            <label for="email">
+              <input type="email" placeholder="Enter your email" id="email" />
+            </label>
+            <button class="get-started-btn" type="submit">Sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <!-- this is for gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
